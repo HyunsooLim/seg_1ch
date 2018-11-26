@@ -205,7 +205,7 @@ def draw_results(test_inputs, test_targets, test_segmentation, test_accuracy, ne
 
 
 def train():
-    BATCH_SIZE = 50
+    BATCH_SIZE = 10
     network = Network()
 
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
