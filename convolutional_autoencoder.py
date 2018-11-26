@@ -35,8 +35,8 @@ np.set_printoptions(threshold=np.nan)
 
 
 class Network:
-    IMAGE_HEIGHT = 512
-    IMAGE_WIDTH = 512
+    IMAGE_HEIGHT = 384
+    IMAGE_WIDTH = 384
     IMAGE_CHANNELS = 1
 
     def __init__(self, layers=None, per_image_standardization=True, batch_norm=True, skip_connections=True):
@@ -205,7 +205,7 @@ def draw_results(test_inputs, test_targets, test_segmentation, test_accuracy, ne
 
 
 def train():
-    BATCH_SIZE = 10
+    BATCH_SIZE = 50
     network = Network()
 
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
