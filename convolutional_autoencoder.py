@@ -35,8 +35,8 @@ np.set_printoptions(threshold=np.nan)
 
 
 class Network:
-    IMAGE_HEIGHT = 384
-    IMAGE_WIDTH = 384
+    IMAGE_HEIGHT = 512
+    IMAGE_WIDTH = 512
     IMAGE_CHANNELS = 1
 
     def __init__(self, layers=None, per_image_standardization=True, batch_norm=True, skip_connections=True):
