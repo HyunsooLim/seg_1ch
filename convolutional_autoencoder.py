@@ -254,7 +254,7 @@ def train():
 
         test_accuracies = []
         # Fit all training data
-        n_epochs = 100
+        n_epochs = 500
         global_start = time.time()
         for epoch_i in range(n_epochs):
             dataset.reset_batch_pointer()
