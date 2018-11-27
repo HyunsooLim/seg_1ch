@@ -187,7 +187,7 @@ def draw_results(test_inputs, test_targets, test_segmentation, test_accuracy, ne
             cmap='gray')
 
         test_image_thresholded = np.array(
-            [0 if x < 0.5 else 255 for x in test_segmentation[example_i].flatten()])
+            [0 if x < 0.4 else 255 for x in test_segmentation[example_i].flatten()])
         axs[3][example_i].imshow(
             np.reshape(test_image_thresholded, [network.IMAGE_HEIGHT, network.IMAGE_WIDTH]),
             cmap='gray')
@@ -254,7 +254,7 @@ def train():
 
         test_accuracies = []
         # Fit all training data
-        n_epochs = 500
+        n_epochs = 300
         global_start = time.time()
         for epoch_i in range(n_epochs):
             dataset.reset_batch_pointer()
